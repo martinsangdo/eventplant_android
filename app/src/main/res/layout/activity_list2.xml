@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context="com.eventplant.ep.eventplant1.ListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <HorizontalScrollView
+                        android:id="@+id/horizontalScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/booth_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp"
+                                    android:text="TextView"
+                                    android:textColor="#000000"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/count_info"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_below="@+id/booth_name"
+                                    android:layout_weight="1"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp"
+                                    android:text="TextView"
+                                    android:textColor="#000000" />
+
+                                <GridLayout
+                                    android:id="@+id/gridLayout3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_below="@+id/horizontalScrollView"
+                                    android:layout_weight="1">
+
+                                    <Spinner
+                                        android:id="@+id/spinner"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+
+                                    <EditText
+                                        android:id="@+id/editSearch"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:ems="10"
+                                        android:inputType="textPersonName"
+                                        android:textSize="12sp" />
+
+                                    <Button
+                                        android:id="@+id/search_btn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="검색"
+                                        android:textSize="12sp" />
+
+                                </GridLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="175dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <Button
+                                        android:id="@+id/barcode_btn"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignBaseline="@+id/down_btn"
+                                        android:layout_alignBottom="@+id/down_btn"
+                                        android:layout_marginBottom="2dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_toStartOf="@+id/down_btn"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/button"
+                                        android:padding="0dp"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text="바코드스캔"
+                                        android:textColor="@android:color/white" />
+
+                                    <Button
+                                        android:id="@+id/stat_btn"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_above="@+id/gridLayout3"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/button"
+                                        android:padding="0dp"
+                                        android:text="통계보기"
+                                        android:textColor="@android:color/white" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <!--<Button-->
+                                            <!--android:id="@+id/down_btn"-->
+                                            <!--android:layout_width="match_parent"-->
+                                            <!--android:layout_height="wrap_content"-->
+                                            <!--android:layout_alignBaseline="@+id/stat_btn"-->
+                                            <!--android:layout_alignBottom="@+id/stat_btn"-->
+                                            <!--android:layout_marginBottom="2dp"-->
+                                            <!--android:layout_marginLeft="10dp"-->
+                                            <!--android:layout_toStartOf="@+id/stat_btn"-->
+                                            <!--android:layout_weight="1"-->
+                                            <!--android:background="@drawable/button"-->
+                                            <!--android:padding="0dp"-->
+                                            <!--android:text="DB 다운로드"-->
+                                            <!--android:textColor="@android:color/white" />-->
+
+                                        <TextView
+                                            android:id="@+id/scroll_info"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignBottom="@+id/stat_btn"
+                                            android:layout_alignEnd="@+id/down_btn"
+                                            android:layout_below="@+id/barcode_btn"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_toEndOf="@+id/stat_btn"
+                                            android:layout_weight="1"
+                                            android:gravity="bottom"
+                                            android:text="화면을 아래로 내리면"
+                                            android:textColor="#000000" />
+
+                                        <TextView
+                                            android:id="@+id/scroll_info2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignBottom="@+id/stat_btn"
+                                            android:layout_alignEnd="@+id/down_btn"
+                                            android:layout_below="@+id/barcode_btn"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_toEndOf="@+id/stat_btn"
+                                            android:layout_weight="1"
+                                            android:text="DB가 새로고침 됩니다."
+                                            android:textColor="#000000" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </GridLayout>
+
+                    </HorizontalScrollView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true">
+
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableLayout
+                            android:id="@+id/table_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="50dp"
+                            android:stretchColumns="*">
+
+                            <TableRow
+                                android:id="@+id/tbrow_top"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tv0"
+                                    android:layout_width="40dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#CCCCCC"
+                                    android:gravity="center_horizontal|center"
+                                    android:text="순번"
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/tv1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:background="#CCCCCC"
+                                    android:gravity="center_horizontal|center"
+                                    android:text="관리번호"
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/tv2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:background="#CCCCCC"
+                                    android:gravity="center_horizontal|center"
+                                    android:paddingLeft="7dp"
+                                    android:paddingRight="7dp"
+                                    android:text="성명"
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/tv5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#CCCCCC"
+                                    android:gravity="center_horizontal|center"
+                                    android:text="등록구분"
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/tv3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:background="#CCCCCC"
+                                    android:gravity="center_horizontal|center"
+                                    android:text="소속"
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/tv4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:background="#CCCCCC"
+                                    android:gravity="center_horizontal|center"
+                                    android:text="이벤트응모"
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/tv6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#CCCCCC"
+                                    android:gravity="center_horizontal|center"
+                                    android:text="부서"
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/tv7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#CCCCCC"
+                                    android:gravity="center_horizontal|center"
+                                    android:text="직위"
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/tv8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#CCCCCC"
+                                    android:gravity="center_horizontal|center"
+                                    android:text="HP"
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/tv9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#CCCCCC"
+                                    android:gravity="center_horizontal|center"
+                                    android:text="Tel"
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/tv10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#CCCCCC"
+                                    android:gravity="center_horizontal|center"
+                                    android:text="Email"
+                                    android:textColor="#000000" />
+
+                            </TableRow>
+                        </TableLayout>
+
+                    </HorizontalScrollView>
+
+
+                </ScrollView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
